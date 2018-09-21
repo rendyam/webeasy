@@ -1,0 +1,233 @@
+body{
+    background: #000;
+    font: 12px arial;
+}
+
+#container{
+    width: 960px;
+    margin: 0 auto;
+    padding: 6px;
+    background: rgba(23, 38, 89, 0.5);
+}
+
+#header{
+    height: 150px;
+}
+
+#menu{
+    background: #172659;
+    height: 35px;
+}
+
+#content{
+    background: #fff;
+    min-height: 400px;
+    overflow: hidden;
+}
+
+#footer{
+    background: #364a88;
+    height: 50px;    
+}
+
+#footer p{
+    color: #ccc;
+    margin: 0;
+    padding-top: 15px;
+    text-align: center;
+}
+
+#menu ul{
+    margin: 0;
+    padding: 0;
+}
+
+#menu ul li{
+    float: left;
+    list-style: none;
+}
+
+#menu ul li a{
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #ddd;
+}
+
+#menu ul li:hover{
+    background: #40569e;
+}
+
+#kiri{
+    width: 700px;
+    min-height: 400px;
+    overflow: hidden;
+    float: left;
+}
+
+.box{
+    padding: 10px;
+    overflow: hidden;
+}
+
+.artikel{
+    display: block;
+    float: left;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.gambar-artikel{
+    float: left;
+    padding: 3px;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+}
+
+#kanan{
+    width: 260px;
+    min-height: 400px;
+    float: left;
+}
+
+#kanan .judul{
+    border-bottom: 1px solid #ccc;
+    padding: 5px 10px;
+}
+
+#kanan ul{
+    padding: 0;
+    margin: 0;
+}
+
+#kanan li{
+    list-style: none;
+    border-bottom: 1px dotted #ddd;
+}
+
+#kanan li a{
+    display: block;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+
+#kanan li a:hover{
+    background: #eee;
+}
+
+.paging{
+    text-align: center;
+}
+
+.paging span{
+    padding: 5px 10px;
+    margin-right: 5px;
+    background: #eee;
+    border: 1px solid #ccc;
+}
+
+#menu ul ul{
+    position: absolute;
+    background: #40569e;
+    width: 150px;
+    display: none;
+}
+
+#menu li:hover ul{
+    display: block;
+}
+
+#menu ul ul li{
+    width: 100%;
+}
+
+#menu ul ul li:hover{
+    background: #172659;
+}
+
+.komentar{
+    border-bottom: 1px solid #eee;
+    margin-bottom: 5px;
+}
+
+.formkomentar{
+    padding: 10px;
+    border: 1px solid #ccc;
+    background: #f8f8f8;
+}
+
+/*---Header---*/
+#header{
+    padding: 10px 0;
+    background: #222;
+}
+/*---Menu---*/
+#menu{
+    background: #222;
+    margin-bottom: 20px;
+}
+/*---Footer---*/
+#footer{
+    background: #222;
+    padding: 10px;
+    margin-top: 20px;
+    color: #555;
+}
+
+#menu .navbar{
+    margin-bottom: 0;
+    border-right: none;
+    border-left: none;
+
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+}
+
+#menu a:hover{
+    background: #888;
+}
+
+#menu .dropdown-menu{
+    background: #000;
+}
+
+#menu .dropdown-menu a{
+    color: #888;
+    padding: 10px;
+}
+
+#menu .dropdown-menu a:hover{
+    background: #222;
+    color: #fff;
+}
+
+.nav-tabs{
+    background: #ddd;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+.tab-content{
+    border: 1px solid #ccc;
+    border-top: none;
+    margin-bottom: 20px;
+}
+
+.tab-content ul{
+    padding: 0;
+}
+
+.tab-content li{
+    list-style: none;
+    border-bottom: 1px solid #eee;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.tab-content img{
+    width: 80px;
+    height: 60px;
+    float: left;
+    margin-right: 10px;
+}
