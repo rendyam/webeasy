@@ -1,20 +1,32 @@
-<form name="tambah" method="post" action="?tampil=artikel_tambahproses" enctype="multipart/form-data">
-    <table>
-        <tr>
-            <td>Judul Artikel</td>
-            <td><input type="text" name="judul" size="50"></td>
-        </tr>
-        <tr>
-            <td>Gambar</td>
-            <td><input type="file" name="gambar"></td>
-        </tr>
-        <tr>
-            <td>Isi Artikel</td>
-            <td><textarea name="isi" cols="80" rows="15"></textarea></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td><input type="submit" name="tambah" value="Tambah"></td>
-        </tr>
-    </table>
+<?php
+    if(!defined("INDEX")) die("---");
+?>
+
+<h2 class="sub-header">Tambah Artikel</h2>
+
+<form name="tambah" method="post" action="?tampil=artikel_tambahproses" enctype="multipart/form-data" class="form-horizontal">
+    <div class="form-group">
+        <label class="label-control col-md-2">Judul Artikel</label>
+        <div class="col-md-4">
+            <input type="text" name="judul" size="50" class="form-control">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="label-control col-md-2">Gambar</label>
+        <div class="col-md-4">
+            <input type="file" name="gambar" class="form-control">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="label-control col-md-2">Isi Artikel</label>
+        <div class="col-md-4">
+            <textarea name="isi" cols="80" rows="15" class="form-control"></textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="label-control col-md-2"></label>
+        <div class="col-md-4">
+            <input type="submit" name="tambah" value="Tambah" class="btn btn-primary">
+        </div>
+    </div>
 </form>

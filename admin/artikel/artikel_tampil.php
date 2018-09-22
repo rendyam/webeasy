@@ -1,8 +1,9 @@
-<h2>Data Artikel</h2>
-<a href="?tampil=artikel_tambah">Tambah Artikel</a>
+<h2 class="sub-header">Data Artikel</h2>
+<a href="?tampil=artikel_tambah" class="btn btn-primary btn-sm">Tambah Artikel</a>
 <br>
 <br>
-<table width="100%" cellspacing="0" class="data" border="1">
+<div class="table-responsive">
+    <table class="table table-striped">
     <tr>
         <th>No</th>
         <th>Judul Artikel</th>
@@ -28,12 +29,13 @@
             <td><?php echo $data['judul'];?></td>
             <td><?php echo $tanggal; ?></td>
             <td>
-                <a href="?tampil=artikel_edit&id=<?php echo $data['id_artikel'];?>">EDIT</a> | 
-                <a href="?tampil=artikel_hapus&id=<?php echo $data['id_artikel'];?>">HAPUS</a>
+                <a href="?tampil=artikel_edit&id=<?php echo $data['id_artikel'];?>" class="btn btn-primary btn-sm">EDIT</a> | 
+                <a href="?tampil=artikel_hapus&id=<?php echo $data['id_artikel'];?>" class="btn btn-danger btn-sm">HAPUS</a>
             </td>
         </tr>
     <?php
         $no++;
         }
     ?>
-</table>
+    </table>
+</div>

@@ -1,5 +1,6 @@
-<h2>Data Pesan</h2>
-    <table width="100%" cellspacing="0" class="data" border="1">
+<h2 class="sub-header">Data Pesan</h2>
+<div class="table-responsive">
+    <table class="table table-striped">
         <tr>
             <th>No</th>
             <th>Nama</th>
@@ -30,10 +31,12 @@
                 </a>
             </td>
             <td><?php echo $data['tanggal']; ?> </td>
-            <td><a href="?tampil=pesan_hapus&id=<?php echo $data['id_pesan']; ?>"> Hapus </td>
+            <td><a href="?tampil=pesan_hapus&id=<?php echo $data['id_pesan']; ?>" class="btn btn-danger"> Hapus </td>
         </tr>
 
         <?php
+            $no++;
             }
         ?>
     </table>
+</div>

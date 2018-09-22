@@ -27,7 +27,7 @@
                 <div class="col-md-2 col-sm-3 sidebar hidden-xs">
                     <?php include("sidebar.php"); ?>
                 </div>
-                <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                <div class="col-sm-9 col-md-10 main"> <!--col-sm-offset-3 col-md-offset-2 -->
                     <?php include("konten.php"); ?>
                 </div>
             </div>

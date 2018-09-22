@@ -9,49 +9,55 @@
             ")or die(mysql_error());
     $data = mysql_fetch_array($sql);
 ?>
-<h2>Edit Submenu</h2>
+<h2 class="sub-header">Edit Submenu</h2>
 
-<form name="edit" method="post" action="?tampil=submenu_editproses">
+<form name="edit" method="post" action="?tampil=submenu_editproses" class="form-horizontal">
     <input type="hidden" name="id" value="<?php echo $data['id_submenu']; ?>">
-    <table>
-        <tr>
-            <td>Judul Menu</td>
-            <td><input type="text" name="judul" value="<?php echo $data['judul'];?>"></td>
-        </tr>
-        <tr>
-            <td>Induk</td>
-            <td>
-                <select name="induk">
-                    <?php
-                        $sqlmenu = mysql_query("
-                                        SELECT
-                                            *
-                                        FROM
-                                            menu
-                                    ");
-                        while($datamenu=mysql_fetch_array($sqlmenu)){
-                            if($datamenu['id_menu'] == $data['id_menu']){
-                                echo "<option value='$datamenu[id_menu]' selected>$datamenu[id_menu]</option>";
-                            }else{
-                                echo "<option value='$datamenu[id_menu]'> $data[id_menu] </option>";
-                            }
+
+    <div class="form-group">
+        <label class="label-control col-md-2">Judul Menu</label>
+        <div class="col-md-4">
+            <input type="text" name="judul" size="50" value="<?php echo $data['judul'];?>" class="form-control">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="label-control col-md-2">Induk</label>
+        <div class="col-md-4">
+            <select name="induk" class="form-control">
+                <?php
+                    $sqlmenu = mysql_query("
+                                    SELECT
+                                        *
+                                    FROM
+                                        menu
+                                ");
+                    while($datamenu=mysql_fetch_array($sqlmenu)){
+                        if($datamenu['id_menu'] == $data['id_menu']){
+                            echo "<option value='$datamenu[id_menu]' selected>$datamenu[id_menu]</option>";
+                        }else{
+                            echo "<option value='$datamenu[id_menu]'> $data[id_menu] </option>";
                         }
-                    ?>
-                </select>
-            </td>
-        </tr>
-        
-        <tr>
-            <td>Link</td>
-            <td><input type="text" name="link" value="<?php echo $data['link'];?>"></td>
-        </tr>
-        <tr>
-            <td>Urutan</td>
-            <td><input type="text" name="urutan" value="<?php echo $data['urutan'];?>"></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td><input type="submit" name="edit" value="Edit"></td>
-        </tr>
-    </table>
+                    }
+                ?>
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="label-control col-md-2">Link</label>
+        <div class="col-md-4">
+            <input type="text" name="link" value="<?php echo $data['link'];?>" class="form-control">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="label-control col-md-2">Urutan</label>
+        <div class="col-md-4">
+            <input type="text" name="urutan" value="<?php echo $data['urutan'];?>" class="form-control">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="label-control col-md-2"></label>
+        <div class="col-md-4">
+            <input type="submit" name="edit" value="Edit" class="btn btn-primary">
+        </div>
+    </div>
 </form>

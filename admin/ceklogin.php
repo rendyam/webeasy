@@ -5,7 +5,7 @@
     $username = $_POST['username'];
     $password = md5($_POST['password']);
 
-    $cek = mysql_query("
+    $cek = $mysqli->query("
                 SELECT 
                     *
                 FROM
@@ -14,8 +14,8 @@
                     username = '$username'
                     and password = '$password'
             ");
-    $data = mysql_fetch_array($cek);
-    $jumlah = mysql_num_rows($cek);
+    $data = $cek->fetch_array();
+    $jumlah = $cek->num_rows;
 
     if($jumlah > 0){
         $_SESSION['username'] = $data['username'];
